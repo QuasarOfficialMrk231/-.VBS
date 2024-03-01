@@ -1,1 +1,1 @@
-# -.VBS
+@TheBlackQuasar.vbs
