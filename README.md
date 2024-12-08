@@ -1,1 +1,1 @@
-@TheBlackQuasar.vbs
+@TheBlackQuasar.html
