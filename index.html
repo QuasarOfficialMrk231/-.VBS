@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-body {
-color: white;
-background-color: black;
-    } 
-</style>
-<download ref="
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой красивый сайт</title>
+    <style>
+        /* Общий стиль */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #555;
+        }
+
+        main {
+            margin-top: 100px;
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Кнопка */
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+    </header>
+
+    <main>
+        <h2>О нас</h2>
+        <p>
+            Этот сайт создан с любовью, чтобы показать пример современного и минималистичного дизайна.
+            Здесь вы найдете вдохновение и идеи для своих проектов.
+        </p>
+        <a href="#!" class="button">Узнать больше</a>
+    </main>
+
+    <footer>
+        <p>© 2024 Мой сайт. Сделано с ❤️. <a href="https://github.com/QuasarOfficialMrk231" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html> 
