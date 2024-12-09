@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Склад вирусов TBQ</title>
+<title>TBQ Virus Storage</title>
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+        background: linear-gradient(135deg, #2c0000, #3e0000);
         color: #fff;
         text-align: center;
     }
     header {
         padding: 20px;
-        background: #111;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        background: #000;
+        box-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
     }
     header h1 {
         margin: 0;
         font-size: 2.5em;
         text-transform: uppercase;
+        color: #ff0000;
         letter-spacing: 3px;
     }
     .container {
@@ -33,75 +34,82 @@
         font-size: 2em;
         margin: 30px 0 20px;
         text-transform: uppercase;
-        color: #03a9f4;
+        color: #ff3333;
+        border-bottom: 2px solid #ff0000;
+        display: inline-block;
+        padding-bottom: 5px;
     }
     .virus-card {
         display: inline-block;
         width: 300px;
         margin: 20px;
         padding: 20px;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.8);
+        border: 1px solid #ff0000;
         border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .virus-card:hover {
         transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.7);
     }
     .virus-card h2 {
         font-size: 1.5em;
         margin-bottom: 15px;
+        color: #ff6666;
     }
     .download-btn {
         display: inline-block;
         padding: 10px 20px;
         font-size: 1em;
-        background: #03a9f4;
+        background: #ff0000;
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
         transition: background 0.3s ease;
     }
     .download-btn:hover {
-        background: #0288d1;
+        background: #cc0000;
     }
     footer {
-        background: #111;
+        background: #000;
         padding: 10px;
         margin-top: 20px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 -2px 10px rgba(255, 0, 0, 0.5);
     }
     footer p {
         margin: 0;
         font-size: 0.9em;
+        color: #ff6666;
     }
 </style>
 </head>
 <body>
 <header>
-    <h1>Склад вирусов TBQ</h1>
+    <h1>TBQ Virus Storage</h1>
 </header>
 <div class="container">
-    <div class="section-title">Слабые вирусы</div>
+    <div class="section-title">Weak Viruses</div>
     <div class="virus-card">
         <h2>ОТКРОЙ1.vbs</h2>
-        <a href="https://drive.google.com/uc?export=download&id=1bS-FZJsMM5s1o0LLnovleiJ493QTmkn0" download class="download-btn">Скачать</a>
+        <a href="https://drive.google.com/uc?export=download&id=1bS-FZJsMM5s1o0LLnovleiJ493QTmkn0" download class="download-btn">Download</a>
     </div>
     
-    <div class="section-title">Нормальные вирусы</div>
+    <div class="section-title">Moderate Viruses</div>
     <div class="virus-card">
-        <h2>Пример нормального вируса</h2>
-        <a href="#" download class="download-btn">Скачать</a>
+        <h2>Example of a Moderate Virus</h2>
+        <a href="#" download class="download-btn">Get File</a>
     </div>
     
-    <div class="section-title">Сильные вирусы</div>
+    <div class="section-title">Strong Viruses</div>
     <div class="virus-card">
-        <h2>Пример сильного вируса</h2>
-        <a href="#" download class="download-btn">Скачать</a>
+        <h2>Example of a Strong Virus</h2>
+        <a href="#" download class="download-btn">Download Now</a>
     </div>
 </div>
 <footer>
-    <p>&copy; 2024 Склад вирусов TBQ. Все права защищены.</p>
+    <p>&copy; 2024 TBQ Virus Storage. All rights reserved.</p>
 </footer>
 </body>
 </html>
