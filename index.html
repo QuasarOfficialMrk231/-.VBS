@@ -6,87 +6,119 @@
     <title>Virus Repository</title>
     <style>
         body {
-            background-color: #000; /* Черный фон */
-            color: #fff; /* Белый текст */
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #ffffff;
         }
+
         header {
-            background-color: #111; /* Темно-серый */
+            background-color: #121212;
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #c00; /* Красная линия */
+            border-bottom: 4px solid #ff4500;
         }
+
         header h1 {
-            color: #fff;
+            font-size: 36px;
+            margin: 0;
+            color: #ff4500;
+            text-shadow: 0 0 10px #ff4500;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #aaaaaa;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
             font-size: 28px;
+            color: #ff4500;
+            border-left: 5px solid #ff4500;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .virus-list {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
-        header p {
-            color: #c00; /* Красный */
-            margin: 5px 0 0;
-        }
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #111; /* Темный блок */
-            border: 1px solid #333; /* Граница */
-            border-radius: 8px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        section h2 {
-            color: #fff;
-            font-size: 20px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
-        .virus-list {
-            list-style-type: none;
-            padding: 0;
-        }
+
         .virus-list li {
-            margin: 10px 0;
-            padding: 10px;
-            background-color: #222; /* Темно-серый */
+            background-color: #1e1e1e;
             border: 1px solid #333;
-            border-radius: 5px;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
+
+        .virus-list li:hover {
+            transform: scale(1.03);
+            background-color: #2b2b2b;
+        }
+
+        .virus-list li strong {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
         .virus-list li a {
-            color: #c00; /* Красный */
+            display: inline-block;
+            margin-top: 10px;
             text-decoration: none;
             font-weight: bold;
+            color: #ff4500;
+            background-color: #121212;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #ff4500;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         .virus-list li a:hover {
-            text-decoration: underline;
+            background-color: #ff4500;
+            color: #000000;
         }
+
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #111;
-            border-top: 2px solid #c00;
-            margin-top: 20px;
+            background-color: #121212;
+            border-top: 4px solid #ff4500;
+            margin-top: 40px;
         }
+
         footer p {
-            margin: 0;
             font-size: 14px;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Virus Repository</h1>
-        <p>Explore the most infamous viruses ever created</p>
+        <p>The most infamous and dangerous viruses</p>
     </header>
     <main>
         <section>
             <h2>Strong Viruses</h2>
             <ul class="virus-list">
                 <li>
-                    <strong>Virus 1:</strong> The most dangerous viruses in our collection. 
+                    <strong>Virus 1:</strong> Extremely dangerous and harmful. Use with caution!
                     <a href="#" target="_blank">Download</a>
                 </li>
             </ul>
@@ -95,7 +127,7 @@
             <h2>Normal Viruses</h2>
             <ul class="virus-list">
                 <li>
-                    <strong>ОТКРОЙ1.vbs:</strong> Medium-strength viruses capable of causing harm. 
+                    <strong>ОТКРОЙ1.vbs:</strong> Medium-risk viruses capable of causing moderate damage.
                     <a href="https://drive.google.com/uc?export=download&id=1DotQCDk9qQuhA0A3N3U8dUWRDExF4E0t" target="_blank">Download</a>
                 </li>
             </ul>
@@ -104,14 +136,14 @@
             <h2>Weak Viruses</h2>
             <ul class="virus-list">
                 <li>
-                    <strong>ОТКРОЙ1.vbs:</strong> Weak viruses, such as pop-ups, for demonstration purposes. 
+                    <strong>ОТКРОЙ1.vbs:</strong> Harmless and for demonstration purposes.
                     <a href="https://drive.google.com/uc?export=download&id=1bS-FZJsMM5s1o0LLnovleiJ493QTmkn0" target="_blank">Download</a>
                 </li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>WARNING: These viruses are for educational purposes only. Do not execute them on critical systems.</p>
+        <p>WARNING: These viruses are for educational purposes only. Use responsibly.</p>
     </footer>
 </body>
 </html>
